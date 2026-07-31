@@ -1,6 +1,16 @@
 import AppKit
 import SwiftUI
 
+/// Floating Stack geometry. It opens small and can be dragged out to a much
+/// larger size; `layoutVersion` is bumped whenever these defaults change so a
+/// stale saved frame does not mask the new size.
+enum FloatingLayout {
+    static let defaultSize = NSSize(width: 300, height: 360)
+    static let minimumSize = NSSize(width: 240, height: 200)
+    static let maximumSize = NSSize(width: 680, height: 840)
+    static let layoutVersion = 4
+}
+
 @MainActor
 final class AppCoordinator: NSObject {
     let store: AppStore
@@ -146,7 +156,7 @@ final class AppCoordinator: NSObject {
 
     private func makeFloatingPanel() -> FloatingPanel {
         let panel = FloatingPanel(
-            contentRect: NSRect(x: 0, y: 0, width: 380, height: 440),
+            contentRect: NSRect(origin: .zero, size: FloatingLayout.defaultSize),
             styleMask: [.borderless, .resizable],
             backing: .buffered,
             defer: false
@@ -158,8 +168,10 @@ final class AppCoordinator: NSObject {
         panel.level = .floating
         panel.hidesOnDeactivate = false
         panel.isReleasedWhenClosed = false
-        panel.contentMinSize = NSSize(width: 340, height: 360)
-        panel.contentMaxSize = NSSize(width: 680, height: 840)
+        panel.contentMinSize = FloatingLayout.minimumSize
+        panel.contentMaxSize = FloatingLayout.maximumSize
+        panel.minSize = FloatingLayout.minimumSize
+        panel.maxSize = FloatingLayout.maximumSize
         panel.delegate = self
 
         let view = FloatingStackView(store: store, actions: actions)
@@ -235,8 +247,8 @@ final class AppCoordinator: NSObject {
 
     private func adjustedFrame(_ frame: NSRect, inside visible: NSRect) -> NSRect {
         var result = frame
-        let minimum = floatingPanel?.minSize ?? NSSize(width: 340, height: 360)
-        let maximum = floatingPanel?.maxSize ?? NSSize(width: 680, height: 840)
+        let minimum = FloatingLayout.minimumSize
+        let maximum = FloatingLayout.maximumSize
         result.size.width = min(max(result.size.width, minimum.width), maximum.width)
         result.size.height = min(max(result.size.height, minimum.height), maximum.height)
         result.size.width = min(result.size.width, visible.width)
@@ -247,14 +259,13 @@ final class AppCoordinator: NSObject {
     }
 
     private func migrateFloatingLayoutIfNeeded() {
-        let currentVersion = 3
         let savedVersion = UserDefaults.standard.integer(
             forKey: SettingsKeys.floatingLayoutVersion
         )
-        guard savedVersion < currentVersion else { return }
+        guard savedVersion < FloatingLayout.layoutVersion else { return }
         UserDefaults.standard.removeObject(forKey: SettingsKeys.floatingFrame)
         UserDefaults.standard.set(
-            currentVersion,
+            FloatingLayout.layoutVersion,
             forKey: SettingsKeys.floatingLayoutVersion
         )
     }

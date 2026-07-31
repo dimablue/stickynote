@@ -5,16 +5,27 @@ struct NoteNavigator: View {
     @Binding var showsSwitcher: Bool
     @ObservedObject var actions: AppActions
     var compact: Bool
+    /// The arrows are actions, so they may be hidden until hovered. The count
+    /// itself is state and always stays legible.
+    var arrowsVisible = true
+
+    /// Compact arrows are deliberately tighter than a standard control so the
+    /// count sits close to the window corner.
+    private var arrowSize: CGFloat {
+        compact ? 14 : StickyTheme.controlSize
+    }
 
     var body: some View {
         HStack(spacing: compact ? 0 : 4) {
             IconButton(
                 systemName: "chevron.left",
                 label: "Previous note",
-                isEnabled: store.canGoPrevious
+                isEnabled: store.canGoPrevious,
+                size: arrowSize
             ) {
                 store.navigate(by: -1)
             }
+            .opacity(arrowsVisible ? 1 : 0)
 
             Button {
                 showsSwitcher.toggle()
@@ -22,7 +33,7 @@ struct NoteNavigator: View {
                 Text(countLabel)
                     .font(.system(size: compact ? 10 : 11.5, weight: .medium, design: .rounded))
                     .monospacedDigit()
-                    .frame(minWidth: compact ? 30 : 40)
+                    .frame(minWidth: compact ? 26 : 40)
             }
             .buttonStyle(.borderless)
             .controlSize(.mini)
@@ -40,10 +51,12 @@ struct NoteNavigator: View {
             IconButton(
                 systemName: "chevron.right",
                 label: "Next note",
-                isEnabled: store.canGoNext
+                isEnabled: store.canGoNext,
+                size: arrowSize
             ) {
                 store.navigate(by: 1)
             }
+            .opacity(arrowsVisible ? 1 : 0)
         }
     }
 
