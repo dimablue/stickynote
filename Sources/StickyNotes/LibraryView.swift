@@ -165,8 +165,17 @@ struct LibraryView: View {
 
                 FontSizeControls()
 
-                IconButton(systemName: "plus", label: "Create new note") {
-                    store.createNote()
+                HStack(spacing: 2) {
+                    IconButton(systemName: "plus", label: "Create new note") {
+                        store.createNote()
+                    }
+                    ConfirmingDeleteButton(
+                        systemName: "trash",
+                        label: "Delete current note",
+                        resetKey: store.activeNoteID
+                    ) {
+                        store.deleteActiveNote()
+                    }
                 }
 
                 NoteNavigator(
