@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/StickyNotesPackageTests.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/StickyNotesPackageTests.o",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/primary.swiftdeps"
+  },
+  "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.derived/runner.swift": {
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/release/StickyNotesPackageTests.build/runner.dia"
+  }
+}

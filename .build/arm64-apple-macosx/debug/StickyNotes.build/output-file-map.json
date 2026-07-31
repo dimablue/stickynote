@@ -1,0 +1,82 @@
+{
+  "": {
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/primary.swiftdeps"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppActions.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppActions.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppActions.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppActions~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppActions.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppActions.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppCoordinator.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppCoordinator.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppCoordinator.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppCoordinator.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppCoordinator.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppStore.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppStore.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppStore.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppStore.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/AppStore.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/FloatingStackView.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/FloatingStackView.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/FloatingStackView.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/FloatingStackView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/FloatingStackView.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/FloatingStackView.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/LibraryView.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/LibraryView.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/LibraryView.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/LibraryView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/LibraryView.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/LibraryView.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/Models.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Models.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Models.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Models~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Models.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Models.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/NativeTextEditor.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/NativeTextEditor.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/NativeTextEditor.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/NativeTextEditor~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/NativeTextEditor.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/NativeTextEditor.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/PreferencesView.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/PreferencesView.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/PreferencesView.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/PreferencesView~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/PreferencesView.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/PreferencesView.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/SharedViews.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/SharedViews.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/SharedViews.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/SharedViews~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/SharedViews.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/SharedViews.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/StickyNotesApp.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/StickyNotesApp.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/StickyNotesApp.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/StickyNotesApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/StickyNotesApp.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/StickyNotesApp.dia"
+  },
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/Theme.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Theme.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Theme.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Theme~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Theme.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/arm64-apple-macosx/debug/StickyNotes.build/Theme.dia"
+  }
+}

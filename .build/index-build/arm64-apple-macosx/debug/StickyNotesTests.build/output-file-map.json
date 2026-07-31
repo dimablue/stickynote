@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/primary.swiftdeps"
+  },
+  "/Users/dimaalyahya/stickynote/Tests/StickyNotesTests/ModelTests.swift": {
+    "dependencies": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/ModelTests.d",
+    "object": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/ModelTests.swift.o",
+    "swiftmodule": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/ModelTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/ModelTests.swiftdeps",
+    "diagnostics": "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/ModelTests.dia"
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:stickynote}",
+            "name": "Debug StickyNotes",
+            "target": "StickyNotes",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug StickyNotes"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:stickynote}",
+            "name": "Release StickyNotes",
+            "target": "StickyNotes",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release StickyNotes"
+        }
+    ]
+}

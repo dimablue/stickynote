@@ -1,0 +1,88 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "StickyNotes-arm64-apple-macosx-debug.module": ["<StickyNotes-arm64-apple-macosx-debug.module>"]
+  "StickyNotesPackageTests-arm64-apple-macosx-debug.module": ["<StickyNotesPackageTests-arm64-apple-macosx-debug.module>"]
+  "StickyNotesTests-arm64-apple-macosx-debug.module": ["<StickyNotesTests-arm64-apple-macosx-debug.module>"]
+  "main": ["<StickyNotes-arm64-apple-macosx-debug.module>"]
+  "test": ["<StickyNotes-arm64-apple-macosx-debug.module>","<StickyNotesTests-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/dimaalyahya/stickynote/Sources/StickyNotes/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/dimaalyahya/stickynote/Tests/StickyNotesTests/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppActions.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppCoordinator.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppStore.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/FloatingStackView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/LibraryView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/Models.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/NativeTextEditor.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/PreferencesView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/SharedViews.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/StickyNotesApp.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/Theme.swift"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/sources"]
+    description: "Write auxiliary file /Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/sources"
+
+  "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.derived/runner.swift"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/sources"]
+    description: "Write auxiliary file /Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/sources"
+
+  "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/dimaalyahya/stickynote/Tests/StickyNotesTests/ModelTests.swift"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/sources"]
+    description: "Write auxiliary file /Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/sources"
+
+  "/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<StickyNotes-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotes.swiftmodule"]
+    outputs: ["<StickyNotes-arm64-apple-macosx-debug.module>"]
+
+  "<StickyNotesPackageTests-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesPackageTests.swiftmodule"]
+    outputs: ["<StickyNotesPackageTests-arm64-apple-macosx-debug.module>"]
+
+  "<StickyNotesTests-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesTests.swiftmodule"]
+    outputs: ["<StickyNotesTests-arm64-apple-macosx-debug.module>"]
+
+  "C.StickyNotes-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppActions.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppCoordinator.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/AppStore.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/FloatingStackView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/LibraryView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/Models.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/NativeTextEditor.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/PreferencesView.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/SharedViews.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/StickyNotesApp.swift","/Users/dimaalyahya/stickynote/Sources/StickyNotes/Theme.swift","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/sources"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotes.swiftmodule"]
+    description: "Compiling Swift Module 'StickyNotes' (11 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","StickyNotes","-emit-dependencies","-emit-module","-emit-module-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotes.swiftmodule","-output-file-map","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/output-file-map.json","-incremental","@/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotes.build/sources","-I","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","stickynote"]
+
+  "C.StickyNotesPackageTests-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.derived/runner.swift","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesTests.swiftmodule","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/sources"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesPackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'StickyNotesPackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","StickyNotesPackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesPackageTests.swiftmodule","-output-file-map","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/output-file-map.json","-parse-as-library","-incremental","@/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/sources","-I","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesPackageTests.build/include/StickyNotesPackageTests-Swift.h","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","stickynote"]
+
+  "C.StickyNotesTests-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/dimaalyahya/stickynote/Tests/StickyNotesTests/ModelTests.swift","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotes.swiftmodule","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/sources"]
+    outputs: ["/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesTests.swiftmodule"]
+    description: "Compiling Swift Module 'StickyNotesTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","StickyNotesTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules/StickyNotesTests.swiftmodule","-output-file-map","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/output-file-map.json","-parse-as-library","-incremental","@/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/StickyNotesTests.build/sources","-I","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j10","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/dimaalyahya/stickynote/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","stickynote"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/dimaalyahya/stickynote/Sources/StickyNotes/","/Users/dimaalyahya/stickynote/Tests/StickyNotesTests/","/Users/dimaalyahya/stickynote/Package.swift","/Users/dimaalyahya/stickynote/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
