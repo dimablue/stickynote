@@ -11,7 +11,7 @@ struct FloatingStackView: View {
     @AppStorage(SettingsKeys.editorFontSize) private var fontSize = EditorFont.standard
 
     /// Controls are actions, and an action cannot be clicked without first
-    /// moving the pointer onto the note — so they stay out of sight until then.
+    /// moving the pointer onto the note, so they stay out of sight until then.
     /// A presented popover keeps them visible, otherwise it would hang off a
     /// button that had faded away.
     private var revealsControls: Bool {

@@ -6,7 +6,7 @@ enum StickyTheme {
     static let hairline = Color(nsColor: .separatorColor)
     static let editorBackground = Color(nsColor: .textBackgroundColor)
 
-    /// Controls carry no permanent background; they reveal a faint fill only
+    /// Controls carry no permanent background. They reveal a faint fill only
     /// while the pointer is over them.
     static let controlHover = Color.primary.opacity(0.08)
     static let controlCornerRadius: CGFloat = 5

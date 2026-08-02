@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 /// Floating Stack geometry. It opens small and can be dragged out to a much
-/// larger size; `layoutVersion` is bumped whenever these defaults change so a
+/// larger size. `layoutVersion` is bumped whenever these defaults change so a
 /// stale saved frame does not mask the new size.
 enum FloatingLayout {
     static let defaultSize = NSSize(width: 300, height: 360)
